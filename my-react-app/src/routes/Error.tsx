@@ -6,7 +6,7 @@ const Error = () => {
 
     useEffect(()=> {
         setTimeout(()=>{
-            navigate("/", {state: "Error not Found    "})
+            navigate("/", {state: "Error Not Found"})
         }, 1000)
     }, [])
   return (
