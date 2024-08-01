@@ -11,7 +11,7 @@ import Error from './routes/Error'
 function App() {
 
   return (
-    <> 
+    <div className='main'> 
        <Navbar/>
        <div className="route-section">
         <Routes>
@@ -23,7 +23,7 @@ function App() {
           <Route path="*" element={<Error/>}/>
         </Routes>
        </div>
-    </>
+    </div>
   )
 }
 
