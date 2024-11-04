@@ -1,7 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
 import "../styles/Navbar.css";
 
+
 const Navbar = () => {
+
   return (
     <div className="navbar">
       <div className="navbar-container">
@@ -10,7 +12,6 @@ const Navbar = () => {
             RASHIK RAJ
           </Link>
         </div>
-
         <div className="navbar-middle-links">
           <NavLink
             className={({ isActive }) =>
@@ -36,13 +37,6 @@ const Navbar = () => {
             to="/contact"
           >
             Contact
-          </NavLink>
-        </div>
-        <div className="about">
-          <NavLink className={({ isActive }) =>
-              isActive ? "custom-link active" : "custom-link"
-            } to="/about">
-            About
           </NavLink>
         </div>
       </div>
