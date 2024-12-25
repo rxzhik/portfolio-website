@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import { TextPlugin, ScrollTrigger } from "gsap/all";
 import { useEffect } from "react";
 import ExperienceComponent from "../components/ExperienceComponent";
+import SkillComponent from "../components/SkillComponent";
 
 gsap.registerPlugin(TextPlugin, ScrollTrigger);
 
@@ -94,25 +95,6 @@ const Home = () => {
     ease: "none"
   });
 
-
-  gsap.fromTo(".experienceHeader",{
-    opacity: 0,
-    text: ""
-  },
-    {
-    scrollTrigger: {
-      trigger: ".experienceSection",
-      start: "top center",
-      end: "top 30%",
-      scrub: true,
-      // markers: true,
-    },
-    y: `${document.querySelector(".timeline")?.scrollWidth}`,
-    ease: "none",
-    opacity: 1,
-    text: "Experience"
-  });
-  
   }, []);
 
   
@@ -120,21 +102,24 @@ const Home = () => {
 
   return (
     <div className="homeContianer">
-      <div className="hero">
-        <div className="headerSection">
-          <div className="imageContainer">
-            <img src={profileImage} alt="profile-image" />
+      <div className="firstBlackSection">
+        <div className="hero">
+          <div className="headerSection">
+            <div className="imageContainer">
+              <img src={profileImage} alt="profile-image" />
+            </div>
+            <div className="imageContainerCircle"></div>
+            <div className="profileName"></div>
           </div>
-          <div className="imageContainerCircle"></div>
-          <div className="profileName"></div>
+          <div className="aboutSection"></div>
         </div>
-        <div className="aboutSection"></div>
-        </div>
-      <div className="secondSection">
-        <div className="experienceSection">
-          <div className="experienceHeader"></div>
+        <div className="secondSection">
           <ExperienceComponent/>
-          <div className="experienceContent"></div>
+        </div>
+      </div>
+      <div className="firstWhiteSection">
+        <div className="skillSection">
+          <SkillComponent/>
         </div>
       </div>
     </div>

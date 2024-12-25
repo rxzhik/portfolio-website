@@ -12,6 +12,10 @@
     /* border: 3px solid green; */
   }
 
+  .firstBlackSection{
+    background: black;
+  }
+
   .imageContainerCircle{
     position: absolute;
     background-color: #4A4A4A;
@@ -64,16 +68,17 @@
   }
 
   .secondSection{
-    padding-top: 60vh;
+    padding-top: 90vh;
     /* border: 1px solid red; */
   }
 
-  /* .experienceSection{
-    border: 1px solid red;
-  } */
-  .experienceHeader{
-    font-size: 100px;
-    color: white;
-    font-weight: bolder;
-    text-align: center;
+  .timeline{
+    z-index: 20;
+  }
+
+
+
+  /* Skill Section */
+  .skillSection{
+    border: 2px solid red;
   }
