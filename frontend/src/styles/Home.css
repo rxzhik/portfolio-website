@@ -63,20 +63,8 @@
   }
 
   .secondSection{
-    padding: 0 25vw;
+    /* padding: 0 25vw; */
   }
-
-
-  .secondSection{
-    padding-top: 90vh;
-    /* border: 1px solid red; */
-  }
-
-  .timeline{
-    z-index: 20;
-  }
-
-
 
   /* Skill Section */
   .skillSection{

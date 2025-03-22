@@ -11,7 +11,7 @@ import { useRef } from "react";
 import ExperienceComponent from "../components/ExperienceComponent";
 import SkillComponent from "../components/SkillComponent";
 
-gsap.registerPlugin(TextPlugin, ScrollTrigger);
+gsap.registerPlugin(TextPlugin, ScrollTrigger, useGSAP);
 
 const Home = () => {
   const profileName = useRef(null);
@@ -28,9 +28,9 @@ const Home = () => {
         start: "top top",
         // by default end is '+=100%'
         scrub: 1,
-        pin: true,
         pinSpacing: true,
-        markers: true,
+        pin: true,
+        // markers: true,
       }
     });
 
@@ -46,7 +46,7 @@ const Home = () => {
             trigger: imageContainer.current,
             start: "center center",
             end: "center 20%",
-            markers: true,
+            // markers: true,
             scrub: 1,
           },
           // y: "38vh",
@@ -111,29 +111,13 @@ const Home = () => {
         opacity: 1,
         text: "Hi there! I am a Software Engineer and I finished my Bachelors in Computer Science from RMIT Univeristy in Nov, 2024. I am intersted in Web, IOS and VR Development and integrating AI in them to create cool features. I also like networking and understanding computer architecture and how the kernel works. I have done a couple of freelance projects in the past and currently I am working part-time at a start up. I also like playing basketball, running, camping and cinematography.",
       });
-
-
-      // Hero Section Animation Timeline
-      // gsap.to(hero.current,{
-      //   scrollTrigger: {
-      //     trigger: aboutSection.current,
-      //     start: "top 60%",
-      //     end: "top 10%",
-      //     scrub: true,
-      //     pin: hero.current,
-      //     // markers: true,
-      //   },
-      //   y: "50vh",
-      //   ease: "none"
-      // });
-  }, {dependencies: []});
+  }, {dependencies: [], scope: hero});
 
 
   return (
     <div className="homeContianer">
       <div className="firstBlackSection">
         <div ref={hero} className="hero">
-
             <div ref={imageContainer} className="imageContainer">
               <img src={profileImage} alt="profile-image" />
             </div>
@@ -141,11 +125,9 @@ const Home = () => {
             <div ref={profileName} className="profileName"></div>
             <div ref={aboutSection} className="aboutSection"></div>
         </div>
-
         <div className="secondSection">
           <ExperienceComponent/>
         </div>
-
       </div>
 
       <div className="firstWhiteSection">

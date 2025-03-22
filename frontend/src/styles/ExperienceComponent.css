@@ -1,25 +1,30 @@
-.experienceCompContainer{
-    height: 300vh;
-    padding-top: 10vh;
-    opacity: 0;
-    /* border: 1px solid red; */
+.experienceSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 
+    width: 100vw;
+    height: 100vh;
+    /* border: 3px solid red; */
 }
 
-/* .experienceSection{
-    border: 1px solid green;
-} */
-
-.experienceHeader{
+.experienceHeader {
     height: 100px;
     font-size: 100px;
     color: white;
     font-weight: bolder;
     text-align: center;
+    margin-top: calc(30vh - 100px);
+    position: relative;
     /* border: 3px solid white; */
-    
 }
 
-/* .timeline{
-    border: 3px solid red;
-} */
+.experienceCompContainer {
+    padding-top: 10vh;
+    opacity: 0;
+}
+
+.timeline {
+    z-index: 20;
+}
