@@ -29,21 +29,12 @@ const ExperienceComponent = () => {
             // Calculate: -timelineWidth + 100vh + 50vw
             const result = -timelineWidth + viewportHeight + viewportWidth / 2; // 50vw = 50% viewport width
 
-            console.log(
-              "TimelineWidth:",
-              timelineWidth,
-              "100vh:",
-              viewportHeight,
-              "50vw:",
-              viewportWidth / 2
-            );
-
             return `bottom +=${result}px`; // Use += if result is positive after calculation
           },
           scrub: 1,
           pinSpacing: true,
           pin: true,
-          markers: true,
+          // markers: true,
         },
       });
 
@@ -59,7 +50,7 @@ const ExperienceComponent = () => {
             start: "top center",
             end: "top 30%",
             scrub: 1,
-            markers: true,
+            // markers: true,
           },
           ease: "power1.out",
           opacity: 1,
@@ -99,15 +90,6 @@ const ExperienceComponent = () => {
               const result =
                 -timelineWidth + viewportHeight + viewportWidth / 2; // 50vw = 50% viewport width
 
-              console.log(
-                "TimelineWidth:",
-                timelineWidth,
-                "100vh:",
-                viewportHeight,
-                "50vw:",
-                viewportWidth / 2
-              );
-
               return `bottom +=${result}px`; // Use += if result is positive after calculation
             },
             scrub: true,
@@ -125,8 +107,7 @@ const ExperienceComponent = () => {
         }
       );
     },
-    { dependencies: [], scope: exeprienceSection }
-  );
+    { dependencies: [], scope: exeprienceSection });
 
   return (
     <div ref={exeprienceSection} className="experienceSection">
@@ -155,12 +136,14 @@ const ExperienceComponent = () => {
               <time className="font-mono italic text-3xl">
                 Feb. 2022 – Dec. 2024
               </time>
-              <div className="font-black text-4xl">
+              <div className="font-black text-4xl mt-2">
                 Bachelors in Computer Science
               </div>
-              Studying at RMIT University, gaining expertise in software
-              development, full-stack applications, and cloud infrastructure.
-              Active in student tech communities.
+              <p className="mt-4">
+                Studying at RMIT University, gaining expertise in software
+                development, full-stack applications, and cloud infrastructure.
+                Active in student tech communities.
+              </p>
             </div>
             <hr className="border-b-2 border-blue-500" />
           </li>
@@ -185,13 +168,15 @@ const ExperienceComponent = () => {
               <time className="font-mono italic text-3xl">
                 April 2024 – Dec. 2024
               </time>
-              <div className="font-black text-4xl">
+              <div className="font-black text-4xl mt-2">
                 Web Developer at RISC RMIT
               </div>
-              Built a full-stack web application for RMIT Information Security
-              Collective using Next.js, Node.js, and PostgreSQL. Created an
-              interactive platform featuring blogs, event timelines, and
-              applications.
+              <p className="mt-4">
+                Built a full-stack web application for RMIT Information Security
+                Collective using Next.js, Node.js, and PostgreSQL. Created an
+                interactive platform featuring blogs, event timelines, and
+                applications.
+              </p>
             </div>
             <hr className="border-b-2 border-yellow-500" />
           </li>
@@ -216,12 +201,15 @@ const ExperienceComponent = () => {
               <time className="font-mono italic text-3xl">
                 May 2024 – Present
               </time>
-              <div className="font-black text-4xl">
+              <div className="font-black text-4xl mt-2">
                 Freelance Software Developer
               </div>
-              Worked with a team to develop websites, mobile apps, and backend
-              solutions for Instagram influencers. Utilized diverse technologies
-              including Flutter, React, Django, Firebase, AWS, and GCP.
+              <p className="mt-4">
+                Worked with a team to develop websites, mobile apps, and backend
+                solutions for Instagram influencers. Utilized diverse
+                technologies including Flutter, React, Django, Firebase, AWS,
+                and GCP.
+              </p>
             </div>
             <hr className="border-b-2 border-red-500" />
           </li>
@@ -244,14 +232,16 @@ const ExperienceComponent = () => {
             </div>
             <div className="timeline-end mb-10 max-w-3xl text-2xl">
               <time className="font-mono italic text-3xl">
-                Sept. 2024 – Jan. 2025
+                Sept. 2024 – Present
               </time>
-              <div className="font-black text-4xl">
+              <div className="font-black text-4xl mt-2">
                 Software Developer at TechZenith
               </div>
-              Developing tech solutions for small to medium businesses. Building
-              websites and integrating AI tools to improve productivity while
-              maintaining control over development.
+              <p className="mt-4">
+                Developing tech solutions for small to medium businesses.
+                Building websites and integrating AI tools to improve
+                productivity while maintaining control over development.
+              </p>
             </div>
           </li>
         </ul>

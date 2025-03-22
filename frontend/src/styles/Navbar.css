@@ -52,7 +52,7 @@
 }
 
 .custom-link:hover {
-    color: #ffebcd;
+    color: #e79111;
 }
 
 .custom-link::after{
@@ -70,7 +70,7 @@
     opacity: 1;
 }
 .active{
-    color: #ffebcd;
+    color: #e79111;
 }
 .active::after{
     content: '';
