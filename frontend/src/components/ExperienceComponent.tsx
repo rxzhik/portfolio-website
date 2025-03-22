@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
 import { useRef } from "react";
 
-gsap.registerPlugin(TextPlugin, ScrollTrigger);
+gsap.registerPlugin(TextPlugin, ScrollTrigger, useGSAP);
 
 const ExperienceComponent = () => {
   const exeprienceSection = useRef(null);
@@ -14,8 +14,7 @@ const ExperienceComponent = () => {
   const experienceCompContainer = useRef(null);
   const timeline = useRef(null);
 
-  useGSAP(
-    () => {
+  useGSAP(() => {
       const tl_exp = gsap.timeline({
         scrollTrigger: {
           trigger: exeprienceSection.current,
@@ -32,9 +31,9 @@ const ExperienceComponent = () => {
             return `bottom +=${result}px`; // Use += if result is positive after calculation
           },
           scrub: 1,
-          pinSpacing: true,
           pin: true,
-          // markers: true,
+          pinSpacing: true,
+          markers: true,
         },
       });
 
@@ -107,7 +106,7 @@ const ExperienceComponent = () => {
         }
       );
     },
-    { dependencies: [], scope: exeprienceSection });
+    { dependencies: []});
 
   return (
     <div ref={exeprienceSection} className="experienceSection">

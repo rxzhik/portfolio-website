@@ -1,6 +1,10 @@
   .firstBlackSection{
     background: black;
   }
+  .hero, .experienceSection {
+    z-index: 1;
+    position: relative;
+  }
 
   .hero{
     display: flex;

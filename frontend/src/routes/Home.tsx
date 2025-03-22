@@ -26,10 +26,10 @@ const Home = () => {
       scrollTrigger: {
         trigger: hero.current,
         start: "top top",
-        // by default end is '+=100%'
+        end: "bottom top",
         scrub: 1,
-        pinSpacing: true,
         pin: true,
+        pinSpacing: true,
         // markers: true,
       }
     });
@@ -105,13 +105,12 @@ const Home = () => {
           endTrigger: hero.current,
           end: "bottom top",
           scrub: true,
-          // markers: true,
-          pinSpacing: true,
+          // markers: true
         },
         opacity: 1,
         text: "Hi there! I am a Software Engineer and I finished my Bachelors in Computer Science from RMIT Univeristy in Nov, 2024. I am intersted in Web, IOS and VR Development and integrating AI in them to create cool features. I also like networking and understanding computer architecture and how the kernel works. I have done a couple of freelance projects in the past and currently I am working part-time at a start up. I also like playing basketball, running, camping and cinematography.",
       });
-  }, {dependencies: [], scope: hero});
+  }, {dependencies: []});
 
 
   return (
