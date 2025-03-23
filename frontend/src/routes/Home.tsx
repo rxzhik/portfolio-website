@@ -3,6 +3,7 @@ import "../styles/Home.css";
 import ExperienceComponent from "../components/ExperienceComponent";
 import SkillComponent from "../components/SkillComponent";
 import Hero from "../components/Hero";
+import ProjectComponent from "../components/ProjectComponent";
 
 const Home = () => {
 
@@ -14,9 +15,10 @@ const Home = () => {
       </div>
 
       <div className="firstWhiteSection">
-        <div className="skillSection">
-          <SkillComponent/>
-        </div>
+        <SkillComponent/>
+      </div>
+      <div className="secondBlackSection">
+        <ProjectComponent/>
       </div>
     </div>
   );

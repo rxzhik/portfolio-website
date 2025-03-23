@@ -67,7 +67,6 @@
     font-size: 20px;
   }
 
-  /* Skill Section */
-  .skillSection{
-    border: 2px solid red;
+  .firstWhiteSection{
+    background-color: white;
   }
