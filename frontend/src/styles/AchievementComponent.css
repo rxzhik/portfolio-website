@@ -14,16 +14,57 @@
     color: white;
     margin-top: calc(30vh - 100px);
     position: relative;
+    margin-bottom: 20px;
 }
 
 .ach-comp-container {
     display: flex;
     width: 100vw;
-    flex-direction: row;
+    flex-direction: column;
     align-items: stretch;
     justify-content: stretch;
-    /* gap: 20px; */
+    gap: 50px;
     text-align: center;
     margin-bottom: 20px;
+    padding: 0 20vw;
    
+}
+
+.ach-rmit{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-around;
+}
+
+.ach-medibank{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-around;
+}
+
+.ach-medibank .ach-text{
+    font-size: 20px;
+    color: white;
+    text-align: right;
+    width: 50%;
+}
+
+.ach-rmit .ach-text{
+    font-size: 20px;
+    color: white;
+    text-align: left;
+    width: 50%;
+}
+
+.ach-text h2{
+    font-size: 40px;
+    font-weight: bolder;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.ach-media{
+    width: 20vw;
 }
