@@ -24,7 +24,8 @@
     justify-content: stretch;
     /* gap: 20px; */
     text-align: center;
-    /* border: 5px solid #e79111; */
+    margin-bottom: 20px;
+   
 }
 .skillContentContainer h1{
     font-size: 50px;

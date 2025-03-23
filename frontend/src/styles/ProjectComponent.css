@@ -1,3 +1,9 @@
+.spacer {
+    height: 100vh;
+    z-index: -100;
+    /* border: 1px solid yellow; */
+}
+
 .projectContainer {
     display: flex;
     flex-direction: column;
@@ -6,4 +12,35 @@
 
     width: 100vw;
     min-height: 100vh;
+    /* border: 1px solid red; */
+    z-index: -1;
 }
+
+.projectHeader {
+    font-size: 100px;
+    font-weight: bolder;
+    color: white;
+    margin-top: calc(30vh - 100px);
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    /* border: 5px solid green; */
+}
+
+.projectCompContainer {
+    display: flex;
+    width: 100vw;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    /* border: 1px solid green; */
+}
+

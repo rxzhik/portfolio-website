@@ -27,8 +27,8 @@ const SkillComponent = ()=>{
             end: "bottom top",
             scrub: 1,
             pin: true,
-            pinSpacing: true,
-            markers: true,
+            pinSpacing: false,
+            // markers: true,
           },
         });
 
@@ -51,9 +51,25 @@ const SkillComponent = ()=>{
           opacity: 1,
           y: "-20%",
           text: "Skills"
+        }).fromTo([skillHeading.current], {
+          color: "black",
+        }, {
+          scrollTrigger: {
+            trigger: skillContainer.current,
+            start: "bottom center",
+            end: `bottom 40%`,
+            scrub: 1,
+            // markers: true,
+          },
+          color: "white",
+          stagger: {
+            amount: 0.5,
+            from: "end",
+          },
         });
         
-        gsap.utils.toArray("[data-name]").forEach((badge) => {
+        const skillHeadingList = gsap.utils.toArray("[data-name]")
+        skillHeadingList.forEach((badge) => {
           const badgeElement = badge as HTMLElement;
 
           tl_skl.fromTo(badgeElement,{
@@ -75,6 +91,22 @@ const SkillComponent = ()=>{
           })
       });
 
+        tl_skl.fromTo([skillHeader.current, ...skillHeadingList], {
+          color: "black",
+        }, {
+          scrollTrigger: {
+            trigger: ".spacer",
+            start: "top center",
+            end: `top 30%`,
+            scrub: 1,
+            // markers: true,
+          },
+          color: "white",
+          stagger: {
+            amount: 0.7,
+            from: "end",
+          },
+        });
         // ANIMATING THE NAVBAR
         // Updating the Navbar color on scroll
         // Type casting the selected element to `HTMLElement`
@@ -112,9 +144,10 @@ const SkillComponent = ()=>{
           opacity: 1,
           stagger: {
             amount: 0.5,
-            from: "random",
+            from: "end",
           },
       });
+
   
       },{dependencies: []});
 
@@ -122,7 +155,6 @@ const SkillComponent = ()=>{
     return(
         <div ref={skillContainer} className="skillContainer">
             <div ref={skillHeader} className="skillHeader"></div>
-            <div ref={skillContentContainer} className="skillContentContainer">
             <div ref={skillContentContainer} className="skillContentContainer">
               {/* Languages */}
               <div>
@@ -342,7 +374,6 @@ const SkillComponent = ()=>{
                   </div>
                 </div>
               </div>
-            </div>
             </div>
         </div>
     )
