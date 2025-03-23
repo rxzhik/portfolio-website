@@ -4,6 +4,7 @@ import ExperienceComponent from "../components/ExperienceComponent";
 import SkillComponent from "../components/SkillComponent";
 import Hero from "../components/Hero";
 import ProjectComponent from "../components/ProjectComponent";
+import AchievementComponent from "../components/AchievementComponent";
 
 const Home = () => {
 
@@ -19,6 +20,7 @@ const Home = () => {
       </div>
       <div className="secondBlackSection">
         <ProjectComponent/>
+        <AchievementComponent/>
       </div>
     </div>
   );

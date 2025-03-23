@@ -45,7 +45,7 @@ const CardComponent: React.FC<CardComponentProps> = ({photo, head, info}) => {
         };
 
     }, {scope: thisCard});
-    
+
     return (
         <div ref={thisCard} className="card">
             <div ref={media} className="media">

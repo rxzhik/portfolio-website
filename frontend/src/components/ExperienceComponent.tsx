@@ -231,7 +231,7 @@ const ExperienceComponent = () => {
             </div>
             <div className="timeline-end mb-10 max-w-3xl text-2xl">
               <time className="font-mono italic text-3xl">
-                Sept. 2024 – Present
+                Sept. 2024 – Jan. 2025
               </time>
               <div className="font-black text-4xl mt-2">
                 Software Developer at TechZenith

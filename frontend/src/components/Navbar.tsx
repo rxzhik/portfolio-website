@@ -1,5 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import "../styles/Navbar.css";
+import MyPDF from "../assets/resume.pdf";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
 const Navbar = () => {
@@ -28,7 +30,7 @@ const Navbar = () => {
             }
             to="/thoughts"
           >
-            Thoughts
+            Blog
           </NavLink>
           <NavLink
             className={({ isActive }) =>
@@ -38,6 +40,9 @@ const Navbar = () => {
           >
             Contact
           </NavLink>
+          <a href={MyPDF} className="dwl_link" download="rashik_resume.pdf">
+            Resume <i className="fas fa-download"></i>
+          </a>
         </div>
       </div>
     </div>

@@ -84,6 +84,15 @@
     opacity: 1;
 }
 
+.dwl_link {
+    color: inherit; /* Makes sure the link color inherits the default color */
+    text-decoration: none; /* Optional: to remove underline if present */
+  }
+  
+.dwl_link:hover {
+color: green; /* Changes text color to green on hover */
+}
+
 
 
 

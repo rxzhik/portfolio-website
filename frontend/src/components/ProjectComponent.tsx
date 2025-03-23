@@ -1,11 +1,15 @@
 import "../styles/ProjectComponent.css";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
 import { useRef } from "react";
 import CardComponent from "./CardComponent";
+import techzenithgif from "../assets/images/techzenith.gif";
+import smartyimg from "../assets/images/smarty.png";
+import altemirafitnessimg from "../assets/images/altemirafitness.png"
+import cyberobligationimg from "../assets/images/cyberobligation.gif"
+import loopcinemagif from "../assets/images/loopcinema.gif"
 
 gsap.registerPlugin(TextPlugin, ScrollTrigger, useGSAP);
 
@@ -14,8 +18,6 @@ const ProjectComponent = () => {
     const projectHeader = useRef(null);
     const projectCompContainer = useRef(null);
     const spacer = useRef(null);
-    const information = useRef(null);
-    const media = useRef(null);
     
 
     useGSAP(() => {
@@ -95,10 +97,12 @@ const ProjectComponent = () => {
         <div  ref={projectContainer} className="projectContainer">
             <div ref={projectHeader} className="projectHeader"></div>
             <div ref={projectCompContainer} className="projectCompContainer">
-                <CardComponent photo="https://images.unsplash.com/photo-1742240434042-11a13f062673?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" head="Altemira-Fitness" info="This is a project" />
-                <CardComponent photo="https://images.unsplash.com/photo-1742240434042-11a13f062673?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" head="techzenith.com.au" info="This is a project" />
-                <CardComponent photo="https://images.unsplash.com/photo-1742240434042-11a13f062673?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" head="cyberobligation.com" info="This is a project" />
-                <CardComponent photo="https://images.unsplash.com/photo-1742240434042-11a13f062673?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" head="Smarty" info="This is a project" />
+                <CardComponent photo={altemirafitnessimg} head="Altemira-Fitness" info="This is a project" />
+                <CardComponent photo={techzenithgif} head="techzenith.com.au" info="This is a project" />
+                <CardComponent photo={cyberobligationimg} head="cyberobligation.com" info="This is a project" />
+                <CardComponent photo={smartyimg} head="Smarty" info="This is a project" />
+                <CardComponent photo={loopcinemagif} head="Loop Cinema" info="This is a project" />
+                <CardComponent photo={smartyimg} head="Smarty" info="This is a project" />
             </div>
         </div>
     </>
