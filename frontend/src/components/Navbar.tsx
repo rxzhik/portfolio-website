@@ -28,7 +28,7 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive ? "custom-link active" : "custom-link"
             }
-            to="/thoughts"
+            to="/blog"
           >
             Blog
           </NavLink>
