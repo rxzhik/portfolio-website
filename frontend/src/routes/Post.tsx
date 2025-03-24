@@ -6,6 +6,10 @@ import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
 import { client } from "../sanity/client"; // Make sure the client is correctly set up
 import { Link, useParams } from "react-router-dom"; // Use react-router-dom's Link in React
 import "../styles/Post.css";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
+
+
 const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]`;
 
 const { projectId, dataset } = client.config();
@@ -45,25 +49,28 @@ export default function Post() {
     const postImageUrl = post.image
         ? urlFor(post.image)?.width(550).height(310).url()
         : null;
-
     return (
-        <main className="post-container mx-auto min-h-screen max-w-3xl p-8 flex flex-col gap-4">
-            <Link to="/blog" className="hover:underline">
-                ← Back to posts
-            </Link>
-            {postImageUrl && (
-                <img
-                    src={postImageUrl}
-                    alt={post.title}
-                    className="aspect-video rounded-xl"
-                    width="550"
-                    height="310"
-                />
-            )}
-            <h1 className="text-4xl font-bold mb-8">{post.title}</h1>
-            <div className="prose">
-                <p>Published: {new Date(post.publishedAt).toLocaleDateString()}</p>
-                {Array.isArray(post.body) && <PortableText value={post.body} />}
+        <main className="post-container">
+            <div className="post-middle-container">
+                <Link to="/blog" className="post-link">
+                <i className="fas fa-arrow-left fa-3x"></i>
+                </Link>
+                {postImageUrl && (
+                    <img
+                        src={postImageUrl}
+                        alt={post.title}
+                        className="post-img"
+                        width="550"
+                        height="310"
+                    />
+                )}
+                <div>
+                    <div className="post-title">{post.title}</div>
+                    <div className="post-date">Published: {new Date(post.publishedAt).toLocaleDateString()}</div>
+                </div>
+                <div className="post-content">
+                    {Array.isArray(post.body) && <PortableText value={post.body} />}
+                </div>
             </div>
         </main>
     );

@@ -1,6 +1,62 @@
 .post-container {
     width: 100vw;
-    height: 100vh;
-    margin-left: 15vw;
-    margin-right: 15vw;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    flex-grow: 1;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20vh;
+    min-height: 100vh;
+    font-family: 'Arcade';
+}
+
+.post-middle-container{
+    flex-grow: 1;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    max-width: 40vw;
+    gap: 20px;
+    color: white;
+    padding-bottom: 100px;
+}
+
+.post-img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.post-title{
+    font-size: 50px;
+    font-weight: bolder;
+    margin-top: -10px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.post-date{
+    font-size: 15px;
+    color: #e79111;
+    font-weight: bold;
+    margin-top: -20px;
+}
+
+.post-content{
+    font-size: 20px;
+    color: white;
+    line-height: 1.5;
+}
+
+
+
+
+
+
+
+.fas:hover{
+    color: #e79111;
 }
