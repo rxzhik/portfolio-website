@@ -3,6 +3,8 @@ import { SanityDocument } from "@sanity/client";
 import { Link } from "react-router-dom"; // Use react-router-dom's Link in React
 import { client } from "../sanity/client"; // Assuming your sanity client setup is here
 import "../styles/IndexPage.css";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 const POSTS_QUERY = `*[
   _type == "post"
@@ -19,6 +21,7 @@ export default function IndexPage() {
     const fetchPosts = async () => {
       try {
         const fetchedPosts = await client.fetch<SanityDocument[]>(POSTS_QUERY);
+        fetchedPosts.map((post) => console.log(post.title));
         setPosts(fetchedPosts); // Set the fetched posts into state
       } catch (err) {
         setError("Error fetching posts");
@@ -31,7 +34,9 @@ export default function IndexPage() {
     fetchPosts();
   }, []); // Empty dependency array means this runs once when the component mounts
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div className="index-loading">
+    <i className="fas fa-spinner fa-spin fa-3x"></i>
+  </div>;
   if (error) return <div>{error}</div>;
 
   return (

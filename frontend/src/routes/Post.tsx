@@ -31,6 +31,7 @@ export default function Post() {
                     slug,
                 });
                 setPost(fetchedPost);
+                console.log(fetchedPost.body);
             } catch (err) {
                 setError("Error fetching post");
                 console.error(err);
@@ -42,7 +43,9 @@ export default function Post() {
         fetchPost();
     }, [slug]);
 
-    if (loading) return <div>Loading...</div>;
+    if (loading) return <div className="post-loading">
+        <i className="fas fa-spinner fa-spin fa-3x"></i>
+    </div>;
     if (error) return <div>{error}</div>;
     if (!post) return <div>Post not found</div>;
 
@@ -59,14 +62,14 @@ export default function Post() {
                     <img
                         src={postImageUrl}
                         alt={post.title}
-                        className="post-img"
+                        className="post-content-img"
                         width="550"
                         height="310"
                     />
                 )}
                 <div>
-                    <div className="post-title">{post.title}</div>
-                    <div className="post-date">Published: {new Date(post.publishedAt).toLocaleDateString()}</div>
+                    <div className="post-content-title">{post.title}</div>
+                    <div className="post-content-date">Published: {new Date(post.publishedAt).toLocaleDateString()}</div>
                 </div>
                 <div className="post-content">
                     {Array.isArray(post.body) && <PortableText value={post.body} />}
