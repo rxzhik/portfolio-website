@@ -33,9 +33,10 @@
   
   .contact-row {
     display: flex;
+    flex-direction: row;
     align-items: center;
     margin-bottom: 10px;
-    font-size: 40px;
+    gap: 30px;
   }
   
   .icon-link {
@@ -46,7 +47,7 @@
   }
   
   .icon-link:hover {
-    color: #0e76a8; /* LinkedIn blue */
+    color: #e79111; /* LinkedIn blue */
   }
   
   .contact-text {

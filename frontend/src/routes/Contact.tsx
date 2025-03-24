@@ -13,15 +13,11 @@ const Contact: React.FC = () => {
             rel="noopener noreferrer"
             className="icon-link"
           >
-            <i className="fab fa-linkedin"></i>
+            <i className="fab fa-linkedin fa-2x"></i>
           </a>
-          <span className="contact-text">linkedin.com/in/rxzhik</span>
-        </div>
-        <div className="contact-row">
-          <a href="mailto:rajrashik@outlook.com" className="icon-link">
-            <i className="fas fa-envelope"></i>
+          <a href="mailto:rajrashik@outlook.com?subject=Hello%20There&body=I%20wanted%20to%20reach%20out..." className="icon-link">
+            <i className="fas fa-envelope fa-2x"></i>
           </a>
-          <span className="contact-text">rajrashik@outlook.com</span>
         </div>
       </div>
     </div>
