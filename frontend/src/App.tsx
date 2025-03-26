@@ -7,6 +7,7 @@ import About from './routes/About'
 import Error from './routes/Error'
 import Post from './routes/Post'
 import Blog from './routes/Blog'
+import ExternalRedirect from './components/ExternalRedirect'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/blog/:slug" element={<Post/>}/>
           <Route path="/contact" element={<Contact/>}/>
           <Route path="/about" element={<About/>}/>
+          <Route path="/cms" element={<ExternalRedirect/>}/>
           <Route path="*" element={<Error/>}/>
         </Routes>
        </div>
